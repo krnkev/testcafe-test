@@ -10,6 +10,11 @@ class LandingPage {
   async isDisplayed(testController) {
     await testController.expect(this.pageSelector.exists).ok();
   }
+
+  /** Asserts that this page is currently displayed. */
+  async hasTable(testController) {
+    await testController.expect(this.pageSelector.exists).ok();
+  }
 }
 
 export const landingPage = new LandingPage();
